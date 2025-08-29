@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategorySubController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontedController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
@@ -94,10 +95,14 @@ Route::get('/test', function () {
 
 Route::prefix('admin')->middleware('admin.login')->name('admin.')->group( function () {
 
-    Route::get('/',function(){
-        return view('admin.home');
-    })->name( 'home');
-
+    // Route::get('/',function(){
+    //     return view('admin.home');
+    // })->name( 'home');
+        Route::get('/', [DashboardController::class, 'index'])->name('home');
+        Route::get('/sales-range', [DashboardController::class, 'getSalesRange'])->name('sales-range');
+        Route::get('/sales-by-category', [DashboardController::class, 'getSalesByCategory'])->name('sales-by-category');
+        Route::get('/top-products', [DashboardController::class, 'getTopProducts'])->name('top-products');
+        
     Route::prefix('product')->name('product.')->group( function () {
         Route::get('/',[ProductController::class,'index'])->name('home');
         Route::get('/create',[ProductController::class,'create'])->name('create');

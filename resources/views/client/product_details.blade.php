@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title" style="text-align: left;">
-                    <h2>Same product</h2>
+                    <h2>Sản phẩm tương tự</h2>
                 </div>
             </div>
         </div>

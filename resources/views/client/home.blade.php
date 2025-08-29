@@ -12,8 +12,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="hero-text">
-                                        <h1 style="color: #ffffff">Nội thất Trung Kiên</h1>
-                                        <p style="color: #ffffff">Truy cập ngay shop Nội thất Trung Kiên lựa chọn được những sản phẩm tốt nhất để hoàn thiện nội thất cho ngôi nhà của bạn.</p>
+                                        <h1 style="color: #ffffff">TKHome</h1>
+                                        <p style="color: #ffffff">Truy cập ngay shop TKHome để lựa chọn được những sản phẩm tốt nhất để hoàn thiện nội thất cho ngôi nhà của bạn.</p>
                                         <div class="button">
                                             <a href="{{route('client.product')}}" class="btn">Shop Now!</a>
                                         </div>
@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title" style="text-align: left;">
-                        <h2>New Item</h2>
+                        <h2>Sản phẩm mới</h2>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                                                                 @endphp
                                                                 <span class="price-dec">{{$percent}}% OFF</span>
                                                             @else
-                                                                <span class="new">New</span>
+                                                                <span class="new">Mới</span>
                                                             @endif
                                                         </a>
                                                         <div class="button-head">
@@ -153,7 +153,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title" style="text-align: left;">
-                        <h2>Hot Item</h2>
+                        <h2>Sản phẩm bán chạy</h2>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
                     <div class="top-left">
                         <ul class="list-main">
                             <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                            <li><i class="ti-email"></i> noithattrungkien@shop.com</li>
+                            <li><i class="ti-email"></i> tkhome@shop.com</li>
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -105,7 +105,7 @@
                     <div class="col-lg-2">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="{{route('client.home')}}"><img src="{{asset('images/LOGO3.png')}}" alt="logo"></a>
+                            <a href="{{route('client.home')}}"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
                         </div>
                     <!--/ End Logo -->
                     </div>

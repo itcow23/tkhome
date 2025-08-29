@@ -59,7 +59,7 @@ class Product extends Model
                     ->select('product.*', DB::raw('sum(order_details.quantity) as quantity'))
                     ->join('order_details', 'product.id', '=', 'order_details.product_id')
                     ->join('order','order_details.order_id','=','order.id')
-                    ->where( 'order.status', '=', '2')
+                    ->where([['order.status', '=', '2'],['order.order_date', '>=', now()->subDays(30)]])
                     ->groupBy('product.id')
                     ->orderBy('quantity', 'desc')
                     ->limit(8)

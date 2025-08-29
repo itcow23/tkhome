@@ -202,15 +202,20 @@ class UserController extends Controller
                     ->first();
 
 
-        if($role_id->role_id == 2){
-            if(Auth::guard('admin')->attempt($data)){
-                return redirect()->route('admin.home');
+        if($role_id){
+            if($role_id->role_id == 2 && Auth::guard('admin')->attempt($data)){
+                    return redirect()->route('admin.home');
+                }
+                 else if(!Auth::guard('admin')->attempt($data)){
+                     return redirect()->back()->with('error', 'Email hoặc mật khẩu không đúng');
+                }
+                else{
+                    return redirect()->back()->with('error', 'Bạn không có quyền đăng nhập vào trang này');
+               
+                }
+            }else{
+                return redirect()->back()->with('error', 'Email không tồn tại');
             }
-            return redirect()->back()->with('error', 'Email hoặc mật khẩu không đúng');
-        }else{
-            return redirect()->back()->with('error', 'Bạn không có quyền đăng nhập vào trang này');
-           
-        }
     }
 
     public function logoutAdmin(){

@@ -38,7 +38,6 @@ class FrontedController extends Controller
         }else{
             $products = $product_category;
         }
-       
         return view('client.product',compact('products')); // truyền dữ liệu products vào view
     }
 
@@ -284,7 +283,7 @@ class FrontedController extends Controller
 
         $province =  DB::table('province')->where('province_id',$request->province)->first();
         $district =  DB::table('district')->where('district_id',$request->district)->first();
-        $ward =  DB::table('wards')->where('wards_id',$request->ward)->first();
+        $ward =  DB::table('wards')->where('ward_id',$request->ward)->first();
         $address = $request->address . '-( ' . $ward->name . ', ' . $district->name . ', ' . $province->name . ' )'; // địa chỉ
 
         $dataInsert = [
