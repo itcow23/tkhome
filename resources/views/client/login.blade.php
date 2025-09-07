@@ -37,6 +37,9 @@
                                     Quên mật khẩu
                                 </a>
                             </span>
+                            <a href="{{ url('auth/google') }}" class="btn btn-danger">
+                                <i class="fab fa-google"></i> Đăng nhập với Google
+                            </a>
 							<div class="clear"> </div>
 						</div>
 						<input type="submit" value="LOGIN">

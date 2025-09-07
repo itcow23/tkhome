@@ -49,6 +49,7 @@
     {{-- Toast --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    @yield('css')
 
 
 </head>
@@ -300,6 +301,13 @@
 
         });
     </script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+        intent="WELCOME"
+        chat-title="ChatBoxTKhome"
+        agent-id="6b092ba0-efdc-4a9a-9c26-92c3cc710272"
+        language-code="vi"
+        ></df-messenger>
 </body>
 
 </html>

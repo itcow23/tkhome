@@ -3,7 +3,9 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategorySubController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DialogflowController;
 use App\Http\Controllers\FrontedController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -91,6 +93,10 @@ Route::get('/test', function () {
     return view('client.test');
 })->name('client.test');
 
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 
 Route::prefix('admin')->middleware('admin.login')->name('admin.')->group( function () {
